@@ -21,6 +21,7 @@ function App() {
     function success(result) {
       scanner.clear();
       setScanResult(result);
+
     }
 
     function error(e) {
@@ -33,7 +34,7 @@ function App() {
       {
         scanResult
         ?
-        <div>Sucess: <a href={"http://" + scanResult}></a></div>
+        <div>Success in Scanning</div>
         :
         <div id="reader"></div>
       }
