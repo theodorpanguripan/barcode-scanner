@@ -26,16 +26,17 @@ function App() {
     function error(e) {
       console.warn(e);
     }
-  })
+  }, []);
+
   return (
     <div className="App">
       <h1>QR Code Scanning in React</h1>
       {
         scanResult
         ?
-        <div>Sucess: <a href={"http://" + scanResult}></a></div>
+        <div>Success: <a href={"http://" + scanResult}>{scanResult}</a></div>
         :
-        <div id="reader"></div>
+        <div id="reader">Hello</div>
       }
     </div>
   );
